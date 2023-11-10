@@ -58,8 +58,6 @@ app.post('/submit', async (req, res) => {
     const ordersArr = JSON.parse(existingOrders);
     ordersArr.crustopia.push(order);
 
-
-
     fileWriter(orderPath, JSON.stringify(ordersArr));
     res.status(200).json({message: 'successful'});
 })
